@@ -30,13 +30,9 @@ def garage(): #writing a function to be executed
     }
     return jsonify(data)
 
-# @app.route('/')
-# def index():
-#     return current_app.send_static_file('index.html')
-
-# @app.route('/<path:path>')
-# def index_dir():
-#     return send_from_directory('', path)
+@app.route('/')
+def index():
+    return current_app.send_static_file('index.html')
 
 if __name__=='__main__': #calling  main 
     app.debug=True #setting the debugging option for the application instance
