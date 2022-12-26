@@ -13,8 +13,11 @@ def garage(): #writing a function to be executed
  
 
     data = {
-    "temperature" : sense.get_temperature(),
-    "Subject" : "Data Structures and Algorithms",
+        "temperature" : sense.get_temperature(),
+        "humidity" : sense.get_humidity(),
+        "pressure": sense.get_pressure(),
+        "orientation_degrees": sense.get_orientation_degrees(),
+        "compass": sense.get_compass()
     }
     return jsonify(data)
 
