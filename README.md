@@ -8,8 +8,9 @@ sudo apt install python-pip
 sudo apt install nginx
 pip install virtualenv
 pip install flask gunicorn requests
-
 ```
+
+Copy the pi-sense.service to /etc/systemd/system/
 
 ## Testing HTML
 ```bash

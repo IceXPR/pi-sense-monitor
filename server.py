@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from flask import Flask, jsonify, current_app, send_from_directory #importing the module
 from sense_hat import SenseHat
 
