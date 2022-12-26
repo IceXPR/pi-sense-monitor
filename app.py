@@ -46,9 +46,9 @@ number = [
 0,0,0,1
 ]
 
-humidity_color = [255,0,0] # Red
+humidity_color = [0,255,255] # Red
 fahrenheit_color = [0,255,0] # Green
-negative_humidity_color = [0,255,255] # Cyan
+negative_humidity_color = [255,0,0] # Cyan
 negative_fahrenheit_color = [0,0,255] # Blue
 empty = [0,0,0] # Black
 
