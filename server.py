@@ -10,8 +10,20 @@ app=Flask(__name__,
 @app.route('/api/v1.0/garage', methods=['GET']) #defining a route in the application
 def garage(): #writing a function to be executed 
     
+    celcius = int(round(sense.get_temperature()))
+    fahrenheit = int(round(1.8 * celcius + 32))
+
+    if celcius < 0:
+        celcius = abs(celcius)
+        celcius_color = negative_celcius_color
+    if fahrenheit < 0:
+        fahrenheit = abs(fahrenheit)
+        fahrenheit_color = negative_fahrenheit_color
+
+
     data = {
-        "temperature" : sense.get_temperature(),
+        "celcius" : celcius,
+        "fahrenheit": fahrenheit,
         "humidity" : sense.get_humidity(),
         "pressure": sense.get_pressure(),
         "orientation_degrees": sense.get_orientation_degrees(),
