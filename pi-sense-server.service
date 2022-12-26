@@ -1,0 +1,9 @@
+[Unit]
+Description=PI-Sense Server
+
+[Service]
+ExecStart=/usr/bin/bash /home/pi/pi-sense-monitor/pi-sense-server-start.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

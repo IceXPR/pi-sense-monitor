@@ -13,7 +13,8 @@ pip install flask gunicorn requests
 ### Enable auto-start on boot
 Copy the pi-sense.service to /etc/systemd/system/ and start the sevice
 ```bash
-sudo cp pi-sense.service /etc/systemd/system
+sudo cp pi-sense-display.service /etc/systemd/system
+sudo cp pi-sense-server.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable pi-sense.service
 sudo systemctl is-enabled pi-sense.service  #to verify is enabled

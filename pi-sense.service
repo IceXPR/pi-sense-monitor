@@ -1,9 +1,0 @@
-[Unit]
-Description=PI-Sense Sevices
-
-[Service]
-ExecStart=/usr/bin/bash /home/pi/pi-sense-monitor/services-start.sh
-Type=simple
-
-[Install]
-WantedBy=multi-user.target
