@@ -46,9 +46,9 @@ number = [
 0,0,0,1
 ]
 
-celcius_color = [255,0,0] # Red
+humidity_color = [255,0,0] # Red
 fahrenheit_color = [0,255,0] # Green
-negative_celcius_color = [0,255,255] # Cyan
+negative_humidity_color = [0,255,255] # Cyan
 negative_fahrenheit_color = [0,0,255] # Blue
 empty = [0,0,0] # Black
 
@@ -66,10 +66,11 @@ display = [
 while True:
     celcius = int(round(sense.get_temperature()))
     fahrenheit = int(round(1.8 * celcius + 32))
+    humidity = int(round(sense.get_humidity()))
 
-    if celcius < 0:
-        celcius = abs(celcius)
-        celcius_color = negative_celcius_color
+    if humidity < 30:
+        humidity = abs(humidity)
+        humidity_color = negative_humidity_color
     if fahrenheit < 0:
         fahrenheit = abs(fahrenheit)
         fahrenheit_color = negative_fahrenheit_color
@@ -79,8 +80,8 @@ while True:
     index = 0
     for index_loop in range(0, 4):
         for counter_loop in range(0, 4):
-            display[index] = number[int(celcius/10)*16+pixel_offset]
-            display[index+4] = number[int(celcius%10)*16+pixel_offset]
+            display[index] = number[int(humidity/10)*16+pixel_offset]
+            display[index+4] = number[int(humidity%10)*16+pixel_offset]
             display[index+32] = number[int(fahrenheit/10)*16+pixel_offset]
             display[index+36] = number[int(fahrenheit%10)*16+pixel_offset]
             pixel_offset = pixel_offset + 1
@@ -91,7 +92,7 @@ while True:
     for index in range(0, 64):
         if display[index]:
             if index < 32:
-                display[index] = celcius_color
+                display[index] = humidity_color
             else:
                 display[index] = fahrenheit_color
         else:
