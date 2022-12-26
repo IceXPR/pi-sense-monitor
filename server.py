@@ -4,7 +4,7 @@ from sense_hat import SenseHat
 sense = SenseHat()
 
 app=Flask(__name__,
-        static_url_path='/', 
+        static_url_path='/',
         static_folder='public') #instantiating flask object
 
 @app.route('/api/v1.0/sensors', methods=['GET']) #defining a route in the application
@@ -20,7 +20,7 @@ def garage(): #writing a function to be executed
 
     data = {
         "celcius" : celcius,
-        "fahrenheit": fahrenheit,
+        "fahrenheit": fahrenheit - 12, # -12 to offset the chip heat affecting actual temperature reading
         "humidity" : sense.get_humidity(),
         "pressure": sense.get_pressure(),
         "orientation_degrees": sense.get_orientation_degrees(),
