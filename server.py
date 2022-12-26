@@ -1,13 +1,17 @@
-from flask import Flask, current_app #importing the module
-
+from flask import Flask, jsonify, current_app #importing the module
+from sense_hat import SenseHat
 
 app=Flask(__name__,
         static_url_path='', 
         static_folder='public') #instantiating flask object
 
-@app.route('/api/v1.0/garage') #defining a route in the application
+@app.route('/api/v1.0/garage', method='GET') #defining a route in the application
 def garage(): #writing a function to be executed 
-    return 'PythonGeeks'
+    data = {
+    "Modules" : 15,
+    "Subject" : "Data Structures and Algorithms",
+    }
+    return jsonify(data)
 
 @app.route('/')
 def index():
