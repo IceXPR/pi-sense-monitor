@@ -17,7 +17,9 @@ def garage(): #writing a function to be executed
         "humidity" : sense.get_humidity(),
         "pressure": sense.get_pressure(),
         "orientation_degrees": sense.get_orientation_degrees(),
-        "compass": sense.get_compass()
+        "compass": sense.get_compass(),
+        "gyroscope": sense.get_gyroscope(),
+        "accelerometer": sense.get_accelerometer()
     }
     return jsonify(data)
 
