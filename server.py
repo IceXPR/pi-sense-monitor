@@ -1,6 +1,8 @@
 from flask import Flask #importing the module
 
-app=Flask(__name__) #instantiating flask object
+app=Flask(__name__,
+        static_url_path='', 
+        static_folder='public') #instantiating flask object
 
 @app.route('/api/v1.0/garage') #defining a route in the application
 def func(): #writing a function to be executed 
