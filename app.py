@@ -65,7 +65,7 @@ display = [
 
 while True:
     celcius = int(round(sense.get_temperature()))
-    fahrenheit = int(round(1.8 * celcius + 32))
+    fahrenheit = int(round(1.8 * celcius + 32)) - 12 #-10 to offset the chip heat affecting the measurement.
     humidity = int(round(sense.get_humidity()))
 
     if humidity < 30:

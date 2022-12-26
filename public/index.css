@@ -1,0 +1,9 @@
+.gaugeDiv {
+  padding: 10px;
+  border: 2px;
+  /* margin: 20px; */
+}
+
+#sampledata {
+  color: red;
+}

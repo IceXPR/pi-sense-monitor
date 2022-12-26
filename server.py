@@ -9,7 +9,7 @@ app=Flask(__name__,
 
 @app.route('/api/v1.0/sensors', methods=['GET']) #defining a route in the application
 def garage(): #writing a function to be executed 
-    
+
     celcius = int(round(sense.get_temperature()))
     fahrenheit = int(round(1.8 * celcius + 32))
 
