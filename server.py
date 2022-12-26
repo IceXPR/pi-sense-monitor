@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, current_app #importing the module
 from sense_hat import SenseHat
 
-
+sense = SenseHat()
 
 app=Flask(__name__,
         static_url_path='', 
@@ -10,10 +10,10 @@ app=Flask(__name__,
 @app.route('/api/v1.0/garage', methods=['GET']) #defining a route in the application
 def garage(): #writing a function to be executed 
     
-    sense = SenseHat()
+ 
 
     data = {
-    "temperature" : get_temperature(),
+    "temperature" : sense.get_temperature(),
     "Subject" : "Data Structures and Algorithms",
     }
     return jsonify(data)
