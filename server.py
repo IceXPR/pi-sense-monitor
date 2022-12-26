@@ -10,8 +10,6 @@ app=Flask(__name__,
 @app.route('/api/v1.0/garage', methods=['GET']) #defining a route in the application
 def garage(): #writing a function to be executed 
     
- 
-
     data = {
         "temperature" : sense.get_temperature(),
         "humidity" : sense.get_humidity(),
