@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, current_app #importing the module
+from flask import Flask, jsonify, current_app, send_from_directory #importing the module
 from sense_hat import SenseHat
 
 sense = SenseHat()
 
 app=Flask(__name__,
-        static_url_path='', 
+        static_url_path='/', 
         static_folder='public') #instantiating flask object
 
 @app.route('/api/v1.0/sensors', methods=['GET']) #defining a route in the application
@@ -30,9 +30,13 @@ def garage(): #writing a function to be executed
     }
     return jsonify(data)
 
-@app.route('/')
-def index():
-    return current_app.send_static_file('index.html')
+# @app.route('/')
+# def index():
+#     return current_app.send_static_file('index.html')
+
+# @app.route('/<path:path>')
+# def index_dir():
+#     return send_from_directory('', path)
 
 if __name__=='__main__': #calling  main 
     app.debug=True #setting the debugging option for the application instance
