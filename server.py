@@ -15,11 +15,8 @@ def garage(): #writing a function to be executed
 
     if celcius < 0:
         celcius = abs(celcius)
-        celcius_color = negative_celcius_color
     if fahrenheit < 0:
         fahrenheit = abs(fahrenheit)
-        fahrenheit_color = negative_fahrenheit_color
-
 
     data = {
         "celcius" : celcius,
