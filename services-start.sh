@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-nohup app.py &
-nohup server.py &
+app.py &
+server.py &
