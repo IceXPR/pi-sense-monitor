@@ -16,8 +16,10 @@ Copy the pi-sense.service to /etc/systemd/system/ and start the sevice
 sudo cp pi-sense-display.service /etc/systemd/system
 sudo cp pi-sense-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl enable pi-sense.service
-sudo systemctl is-enabled pi-sense.service  #to verify is enabled
+sudo systemctl enable pi-sense-display.service
+sudo systemctl enable pi-sense-server.service
+sudo systemctl is-enabled pi-sense-display.service  #to verify is enabled
+sudo systemctl is-enabled pi-sense-server.service  #to verify is enabled
 ```
 
 ## Testing HTML
