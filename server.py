@@ -5,7 +5,7 @@ app=Flask(__name__,
         static_url_path='', 
         static_folder='public') #instantiating flask object
 
-@app.route('/api/v1.0/garage', method='GET') #defining a route in the application
+@app.route('/api/v1.0/garage', methods=['GET']) #defining a route in the application
 def garage(): #writing a function to be executed 
     data = {
     "Modules" : 15,
