@@ -1,13 +1,14 @@
 # pi-sense-monitor
-A pi-sense monitor dashboard
+A pi-sense monitor dashboard.  It provides temperature and humidity on the LED in addition to a dashboard and API endpoint with the pi-sense measurements.
 
 ## Setup
 ``` bash
 sudo apt install sense-hat
 sudo apt install python-pip
 sudo apt install nginx
-pip install virtualenv
-pip install flask gunicorn requests
+pip install flask
+python app.py    # for the LED
+python server.py # for the web and api
 ```
 
 ### Enable auto-start on boot
@@ -35,3 +36,4 @@ python -m http.server 8080
 - https://thepi.io/how-to-create-a-raspberry-pi-thermometer-using-the-sense-hat/
 - https://www.jqueryscript.net/animation/Javascript-Animated-Gauges-Plugin-JustGage.html
 - https://github.com/toorshia/justgage
+- https://linuxhandbook.com/create-systemd-services/
