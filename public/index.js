@@ -77,7 +77,6 @@ $(function () {
       }]
     }
   });
-
   let pressure_gauge = new JustGage({
     id: "pressure_gauge", // required
     min: 400,
@@ -105,9 +104,10 @@ $(function () {
     pressure_gauge.refresh(data.pressure);
   }
 
-  // reload every 5secs
+  // load data and reload every 5secs
+  loadData();
   setInterval(() => {
-    loadData()
+    loadData();
   }, 5000)
 
 
