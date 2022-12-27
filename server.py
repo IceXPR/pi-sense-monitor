@@ -22,7 +22,7 @@ def garage(): #writing a function to be executed
 
     data = {
         "celcius" : celcius,
-        "fahrenheit": fahrenheit - 12, # -12 to offset the chip heat affecting actual temperature reading
+        "fahrenheit": fahrenheit - 11, # -11 to offset the chip heat affecting actual temperature reading
         "humidity" : sense.get_humidity(),
         "pressure": sense.get_pressure(),
         "orientation_degrees": sense.get_orientation_degrees(),
