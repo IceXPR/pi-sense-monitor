@@ -53,3 +53,5 @@ curl localhost/api/v1.0/sensors
 - https://www.jqueryscript.net/animation/Javascript-Animated-Gauges-Plugin-JustGage.html
 - https://github.com/toorshia/justgage
 - https://linuxhandbook.com/create-systemd-services/
+- https://www.instructables.com/Make-your-HTML-Website-suitable-for-Mobile-Devices/
+- https://www.mikulskibartosz.name/a-python-http-server-for-serving-static-content/
